@@ -1,1 +1,5 @@
-# Census_Bolumbia_UI
+### json server:
+
+npm install -g json-server
+json-server --watch db.json --routes routes.json
+

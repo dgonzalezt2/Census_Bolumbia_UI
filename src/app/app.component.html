@@ -1,0 +1,54 @@
+<div class="app__header">
+  <div class="app__header-wrapper">
+    <div class="app__logo" (click)="navigateToHome()" tabindex="0">
+      <img height="40px" width="40px" src="assets/ecs-logo.png" alt="Logo" />
+      <h1>ECS</h1>
+    </div>
+    <h2 class="app__title">{{ title }}</h2>
+    <button class="app__menu-button button" (click)="toggleMenu()">
+      &#9776;
+    </button>
+    <!-- Botón de hamburguesa -->
+    <div class="app__navigation" [class.open]="menuOpen">
+      <app-link-button
+        text="Home"
+        link="/"
+        (click)="closeMenu()"
+      ></app-link-button>
+      <app-link-button
+        text="Census Form"
+        link="/census-form"
+        (click)="closeMenu()"
+      ></app-link-button>
+      <app-link-button
+        text="Feedback"
+        link="/feedback"
+        (click)="closeMenu()"
+      ></app-link-button>
+      <app-link-button
+        text="Sign In"
+        link="/signin"
+        (click)="closeMenu()"
+      ></app-link-button>
+    </div>
+  </div>
+</div>
+<h2 class="app__title desktop">{{ title }}</h2>
+<div class="app__content">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="app__footer">
+  <div id="contact-info">
+    <h3>Contact Information</h3>
+    <div class="contact-info__detail">
+      <p>Phone: (+57) 321 888 9999</p>
+      <p class="cat">(҂ ㆆᆽㆆ)ᕤ</p>
+      <p>
+        Email:
+        <a href="mailto:censusoficial@gmail.com">CensusOficial@gmail.com</a>
+      </p>
+    </div>
+  </div>
+  <p>© 2023 ECS Electronic Census System</p>
+</div>

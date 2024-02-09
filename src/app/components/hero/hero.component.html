@@ -1,0 +1,14 @@
+<div class="hero">
+  <div class="hero__left">
+    <app-section-title
+      [title]="title"
+      [subtitle]="subtitle"
+    ></app-section-title>
+    <div class="hero__action">
+      <a class="button" [routerLink]="link">{{ buttonText }}</a>
+    </div>
+  </div>
+  <div class="hero__right">
+    <img class="hero__image" src="{{ backgroundImageUrl }}" alt="" />
+  </div>
+</div>
