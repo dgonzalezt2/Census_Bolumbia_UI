@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+:host,
+:host * {
+  box-sizing: border-box;
+}
+
+.landing {
+    height: auto;
+  &__about-us {
+    padding: 24px;
+    height: fit-content;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+
+    &__title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 24px;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    //small devices
+    @media (max-width: 768px) {
+      &__container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+}
